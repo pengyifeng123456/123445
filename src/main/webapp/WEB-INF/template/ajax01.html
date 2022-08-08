@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"><!--使用thymeleaf-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script><!--使用jQuery-->
+    <script th:src="@{/static/ajaxJs01.js}"></script><!--之前写了这个错误"@{/ajaxJs01.js}"，找了半天-->
+    <!-- //这里用了个@表示把项目名称路径带上，两个一拼接：http://localhost:8080/mvc/static/ajaxJs01.js-->
+</head>
+<body>
+        你的名字:
+        <span id="username"></span>
+        你的年龄:
+        <span id="age"></span>
+        <button onclick="updateData()">点我更新数据</button>
+        <button onclick="submitData()">点我发送数据给后端(post)</button>
+        <button onclick="submitData02()">点我发送数据给后端(ajax)</button>
+        <button onclick="submitData03()">点我发送数据给后端(ajax2)</button>
+</body>
+</html>
